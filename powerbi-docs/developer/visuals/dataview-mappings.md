@@ -200,18 +200,20 @@ Consider the following data roles and mappings:
         "kind": "Measure"
     }
 ],
-"dataViewMappings": {
-    "categorical": {
-        "categories": {
-            "for": { "in": "category" }
-        },
-        "values": {
-            "select": [
-                { "bind": { "to": "measure" } }
-            ]
+"dataViewMappings": [
+    {
+        "categorical": {
+            "categories": {
+                "for": { "in": "category" }
+            },
+            "values": {
+                "select": [
+                    { "bind": { "to": "measure" } }
+                ]
+            }
         }
     }
-}
+]
 ```
 
 The above example reads "Map my `category` data role so that for every field I drag into `category`, its data is mapped to `categorical.categories`. Also, map my `measure` data role to `categorical.values`."
